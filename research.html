@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research interests and projects of Nanyi Zheng.">
+  <title>Research | Nanyi Zheng</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header"><div class="nav-wrap">
+    <a class="site-name" href="index.html">Nanyi Zheng</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-navigation">Menu</button>
+    <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="research.html" aria-current="page">Research</a><a href="publications.html">Publications</a><a href="software.html">Software</a><a href="teaching.html">Teaching</a><a href="files/CV_Nanyi_Zheng.pdf">CV</a>
+    </nav>
+  </div></header>
+  <div class="page-shell">
+    <aside class="profile">
+      <img class="profile-photo" src="assets/images/nanyi-zheng.jpg" alt="Portrait of Nanyi Zheng">
+      <h1>Nanyi Zheng</h1><p class="profile-role">Postdoctoral Researcher in Applied and Computational Mathematics</p><p class="profile-affiliation">Department of Mathematical Sciences<br>University of Delaware</p>
+      <ul class="profile-links"><li><a href="mailto:nyzheng@udel.edu">Email</a></li><li><a href="https://scholar.google.com/citations?hl=en&amp;user=1RE5OWYAAAAJ">Google Scholar</a></li><li><a href="https://github.com/Nanyheng">GitHub</a></li><li><a href="files/CV_Nanyi_Zheng.pdf">Curriculum Vitae</a></li></ul>
+    </aside>
+    <main>
+      <h1>Research</h1>
+      <p>My research focuses on efficient and reliable numerical simulation of kinetic equations and transport-dominated partial differential equations. The central challenge is to resolve high-dimensional phase-space dynamics without sacrificing the conservation and stability properties needed for physically credible long-time simulations.</p>
+
+      <h2>Adaptive Low-Rank Tensor Methods</h2>
+      <p>I develop sampling-based adaptive-rank algorithms that discover low-rank structure without assembling the full high-dimensional tensor. These methods combine semi-Lagrangian evolution with matrix and hierarchical tensor cross approximation, substantially reducing the storage and computational cost of four- and six-dimensional kinetic simulations.</p>
+
+      <h2>Structure-Preserving Algorithms</h2>
+      <p>My work also develops conservative non-splitting schemes for kinetic and fluid models. Local macroscopic conservative corrections are incorporated into adaptive-rank evolution to preserve mass, momentum, and energy while retaining high-order accuracy.</p>
+
+      <h2>High-Order Transport Methods</h2>
+      <p>I study Eulerian–Lagrangian WENO and Hermite WENO discretizations for nonlinear convection–diffusion equations, Vlasov–Poisson systems, and related transport problems. The goal is to combine large stable time steps, high-order accuracy, and robust treatment of complex solution structures.</p>
+
+      <h2>Funded Research</h2>
+      <div class="entry"><div class="entry-head"><span class="entry-title">Tensor Approaches for Simulating Kinetic Systems (TASKS)</span><span class="entry-date">2025–present</span></div><p>Postdoctoral researcher on the University of Delaware team of an AFOSR MURI project, contributing to algorithm design, mathematical derivation, software implementation, and numerical validation for high-dimensional kinetic solvers.</p></div>
+      <div class="entry"><div class="entry-head"><span class="entry-title">A Conservative Low Rank High Order Tensor Approach for Nonlinear Vlasov Equations</span><span class="entry-date">2023–2025</span></div><p>Project-supported postdoctoral researcher responsible for numerical method development, mathematical derivation, research software, and computational verification.</p></div>
+    </main>
+  </div>
+  <footer class="site-footer">© 2026 Nanyi Zheng. Hosted on GitHub Pages.</footer><script src="assets/js/site.js"></script>
+</body>
+</html>

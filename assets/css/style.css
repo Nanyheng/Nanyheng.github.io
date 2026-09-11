@@ -1,0 +1,162 @@
+:root {
+  --ink: #2b2b2b;
+  --muted: #666;
+  --link: #2f628f;
+  --line: #e2e2e2;
+  --soft: #f7f7f7;
+  --page: #fff;
+  --content: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--page);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; }
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-wrap {
+  width: min(calc(100% - 40px), var(--content));
+  min-height: 68px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.site-name {
+  color: #222;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+
+.site-nav { display: flex; align-items: center; gap: 24px; }
+.site-nav a { color: #444; font-size: .95rem; font-weight: 600; }
+.site-nav a[aria-current="page"] { color: var(--link); }
+
+.page-shell {
+  width: min(calc(100% - 40px), var(--content));
+  margin: 54px auto 70px;
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 58px;
+}
+
+.profile { align-self: start; }
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  display: block;
+  object-fit: cover;
+  object-position: 69% 48%;
+  border-radius: 50%;
+  filter: saturate(.92);
+}
+
+.profile h1 {
+  margin: 22px 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.7rem;
+  line-height: 1.2;
+}
+
+.profile-role { margin: 8px 0 0; color: var(--muted); line-height: 1.45; }
+.profile-affiliation { margin: 6px 0 0; color: var(--muted); line-height: 1.45; }
+.profile-links { list-style: none; padding: 0; margin: 20px 0 0; }
+.profile-links li { margin: 7px 0; }
+
+main { min-width: 0; }
+main h1, main h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #303030;
+  line-height: 1.25;
+}
+main h1 { margin: 0 0 24px; font-size: 2rem; }
+main h2 {
+  margin: 38px 0 14px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.4rem;
+}
+main p { margin: 0 0 16px; }
+
+.research-list, .compact-list { padding-left: 1.2rem; }
+.research-list li, .compact-list li { margin: 8px 0; }
+
+.publication-list { padding-left: 1.35rem; }
+.publication-list li { margin: 0 0 22px; padding-left: 6px; }
+.paper-title { font-weight: 650; color: #252525; }
+.paper-links { display: inline-flex; gap: 10px; margin-left: 6px; font-size: .94rem; }
+.author-me { font-weight: 700; }
+.venue { font-style: italic; }
+
+.software-card {
+  margin: 0 0 22px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--link);
+  background: var(--soft);
+}
+.software-card h2 { margin: 0 0 8px; padding: 0; border: 0; }
+.software-card p { margin-bottom: 10px; }
+
+.entry { margin-bottom: 26px; }
+.entry-head { display: flex; justify-content: space-between; gap: 20px; }
+.entry-title { font-weight: 700; }
+.entry-date { color: var(--muted); white-space: nowrap; }
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: #777;
+  font-size: .9rem;
+  text-align: center;
+  padding: 26px 20px 34px;
+}
+
+.menu-button { display: none; }
+
+@media (max-width: 820px) {
+  .nav-wrap { min-height: 62px; align-items: flex-start; padding: 17px 0; flex-wrap: wrap; }
+  .menu-button {
+    display: inline-flex;
+    border: 0;
+    background: transparent;
+    color: #333;
+    font: inherit;
+    font-weight: 650;
+    padding: 0;
+  }
+  .site-nav { display: none; flex-basis: 100%; flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 8px; }
+  .site-nav.open { display: flex; }
+  .page-shell { grid-template-columns: 1fr; gap: 38px; margin-top: 38px; }
+  .profile { text-align: center; }
+  .profile-photo { margin: 0 auto; width: 190px; height: 190px; }
+  .profile-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 5px 18px; }
+  .entry-head { display: block; }
+}
+
+@media print {
+  .site-header, .site-footer { display: none; }
+  .page-shell { width: 100%; margin: 0; }
+}
